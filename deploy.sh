@@ -1,3 +1,4 @@
+cp -r /home/ec2-user/cert ./
 docker build -f Dockerfile -t service-monitor:latest .
 docker run -d --restart=always \
     --name service-monitor \
