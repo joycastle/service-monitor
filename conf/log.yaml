@@ -1,0 +1,14 @@
+# server-lib-log
+logs:
+  error:
+    output: var/logs/error.log-*-*-*
+    level: ALL
+  run:
+    output: var/logs/run.log-*-*-*
+    level: ALL
+  agent:
+    output: var/logs/agent.log-*-*-*
+    level: ALL
+  alert:
+    output: var/logs/alert.log-*-*-*
+    level: ALL
