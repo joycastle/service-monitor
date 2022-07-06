@@ -1,8 +1,16 @@
 name: 服务端监控
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'Environment'
+        required: true
+        default: 'dev'
 jobs:
   deploy:
     name: Deploy
     runs-on: [ service-monitor ]
+    if: ${{ github.event.inputs.job == 'dev' }}
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
