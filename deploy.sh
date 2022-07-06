@@ -1,5 +1,5 @@
 cp -r /home/ec2-user/cert ./
 
-go build
+/usr/local/lib/go/bin/go build
 
-nohub ./service-monitor
+/usr/bin/nohup ./service-monitor
